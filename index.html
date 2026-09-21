@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tinim Zicaph+ | দুধ ও মাংস বৃদ্ধি | TINIM Agrovet</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'SolaimanLipi', Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f7f9fc;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    :root {
+        --primary-color: #0d6efd;
+        --secondary-color: #28a745;
+        --accent-color: #ffc107;
+        --dark-color: #212529;
+        --light-color: #ffffff;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    h1, h2, h3 {
+        color: var(--dark-color);
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    /* Header */
+    header {
+        background-color: var(--light-color);
+        padding: 12px 0;
+        border-bottom: 1px solid #ddd;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    .brand-id {
+        font-size: 0.85rem;
+        color: #666;
+    }
+
+    .cta-button {
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 10px 22px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #218838;
+    }
+
+    /* Hero Section */
+    .hero {
+        margin-top: 70px;
+        background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+        color: white;
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    .hero-title {
+        color: white;
+        font-size: 2.2rem;
+    }
+
+    .hero-sub {
+        font-size: 1.2rem;
+        color: var(--accent-color);
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    /* Benefits */
+    .benefits {
+        background-color: white;
+    }
+
+    .benefit-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+    }
+
+    .benefit-item {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 5px solid var(--secondary-color);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    }
+
+    .benefit-item h3 {
+        color: var(--secondary-color);
+        font-size: 1.15rem;
+    }
+
+    /* Image Gallery Section */
+    .gallery {
+        background-color: #e9ecef;
+        text-align: center;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .gallery-card {
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .gallery-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .gallery-card p {
+        margin-top: 8px;
+        font-weight: bold;
+        color: #444;
+    }
+
+    /* Product & Dosage */
+    .product-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: start;
+        margin-top: 20px;
+    }
+
+    .dosage {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+    }
+
+    .dosage ul {
+        list-style: none;
+        margin-top: 10px;
+    }
+
+    .dosage li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .dosage li::before {
+        content: '✓';
+        color: var(--secondary-color);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+
+    /* Packages */
+    .price-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+    }
+
+    .price-card {
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+        background: white;
+    }
+
+    .price-header {
+        padding: 15px;
+        color: white;
+        text-align: center;
+    }
+
+    .price-body {
+        padding: 20px;
+    }
+
+    .price-features {
+        list-style: none;
+        margin-bottom: 15px;
+    }
+
+    .price-features li {
+        margin-bottom: 8px;
+        border-bottom: 1px solid #f1f1f1;
+        padding-bottom: 5px;
+    }
+
+    .price-value {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: var(--dark-color);
+    }
+
+    .free-item {
+        color: var(--secondary-color);
+        font-weight: bold;
+    }
+
+    .starter .price-header { background-color: #6c757d; }
+    .farmer .price-header { background-color: var(--secondary-color); }
+    .commercial-bag .price-header { background-color: var(--primary-color); }
+    .commercial-bucket .price-header { background-color: #fd7e14; }
+
+    /* Order Section */
+    .order {
+        background-color: var(--dark-color);
+        color: white;
+        text-align: center;
+    }
+
+    .order h2 { color: white; }
+
+    .offer-alert {
+        background-color: var(--accent-color);
+        color: #000;
+        padding: 12px;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 15px 0;
+        font-weight: bold;
+    }
+
+    .contact-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 25px;
+        text-align: left;
+    }
+
+    .contact-item {
+        padding: 15px;
+        border: 1px solid #444;
+        border-radius: 5px;
+        background-color: rgba(255,255,255,0.05);
+    }
+
+    @media (max-width: 768px) {
+        .header-content { flex-direction: column; text-align: center; gap: 8px; }
+        .hero-title { font-size: 1.6rem; }
+        .product-details, .contact-info { grid-template-columns: 1fr; }
+    }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container header-content">
+        <div>
+            <div class="brand">Tinim Zicaph+ <span class="brand-id">(তিনিম জিকাফ+)</span></div>
+            <div class="brand-id">TINIM Agrovet since 2012</div>
+        </div>
+        <a href="#order" class="cta-button"><i class="fas fa-shopping-cart"></i> অর্ডার করুন</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1 class="hero-title">🐄 মাত্র ৩ দিনে দুধ বৃদ্ধি <br>📈 ১০ দিনে দ্বিগুণ হারে মাংস উৎপাদন</h1>
+        <p class="hero-sub">খামারের পশু নিয়ে চিন্তিত? সঠিক পুষ্টির অভাবে কাঙ্ক্ষিত লাভ পাচ্ছেন না?</p>
+        <p style="margin-top: 15px; font-size: 1.05rem; color: #f1f1f1; max-width: 800px; margin-left: auto; margin-right: auto;">
+            আপনার দুশ্চিন্তার দিন শেষ! খামারিদের আস্থার প্রতীক Tinim Zicaph+ (তিনিম জিকাফ+) এখন আপনার হাতের নাগালে। এটি একটি প্রিমিয়াম ফিড সাপ্লিমেন্ট যা গবাদি পশুর দুধ, মাংস, শারীরিক গঠন ও উৎপাদন ক্ষমতা বৃদ্ধিতে জাদুর মতো কাজ করে।
+        </p>
+    </div>
+</section>
+
+<!-- Product Gallery -->
+<section class="gallery">
+    <div class="container">
+        <h2>📷 আমাদের পণ্যের বিভিন্ন প্যাকেজিং</h2>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="1000033005.png" alt="Tinim Milk Booster 1kg Pack">
+                <p>মিল্ক বুস্টার (১ কেজি)</p>
+            </div>
+            <div class="gallery-card">
+                <img src="1000031756.png" alt="Tinim Bull Booster 1kg Pack">
+                <p>বুল বুস্টার (১ কেজি)</p>
+            </div>
+            <div class="gallery-card">
+                <img src="1000033060.png" alt="Tinim Bucket Pack">
+                <p>বালতি প্যাক (৫, ১০ ও ২৫ কেজি)</p>
+            </div>
+            <div class="gallery-card">
+                <img src="1000033067.png" alt="Milk Booster Bag Pack">
+                <p>মিল্ক বুস্টার ব্যাগ (৫, ১০ ও ২৫ কেজি)</p>
+            </div>
+            <div class="gallery-card">
+                <img src="1000033070.jpg" alt="Bull Booster Bag Pack">
+                <p>বুল বুস্টার ব্যাগ (৫, ১০ ও ২৫ কেজি)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits -->
+<section class="benefits">
+    <div class="container">
+        <h2 style="text-align: center;">✨ কেন Tinim Zicaph+ ব্যবহার করবেন?</h2>
+        <div class="benefit-grid">
+            <div class="benefit-item">
+                <h3>🥛 দুধ বৃদ্ধি</h3>
+                <p>মাত্র ৩ দিনের নিয়মিত ব্যবহারে দুধের পরিমাণ উল্লেখযোগ্যভাবে বৃদ্ধি পায়।</p>
+            </div>
+            <div class="benefit-item">
+                <h3>🥩 মাংস বৃদ্ধি</h3>
+                <p>দ্বিগুণ হারে মাংস বৃদ্ধি, আর ১০ দিনেই পশুর মাংস বৃদ্ধি ও শারীরিক পরিবর্তন দৃশ্যমান হয়।</p>
+            </div>
+            <div class="benefit-item">
+                <h3>💪 রোগ প্রতিরোধ</h3>
+                <p>এতে থাকা প্রয়োজনীয় ভিটামিন ও মিনারেল পশুর রোগ প্রতিরোধ ক্ষমতা বাড়ায়।</p>
+            </div>
+            <div class="benefit-item">
+                <h3>🦴 হাড় মজবুত</h3>
+                <p>ক্যালসিয়াম ও ফসফরাসের সঠিক সমন্বয়ে পশুর হাড় ও গঠন মজবুত করে।</p>
+            </div>
+            <div class="benefit-item">
+                <h3>🍽️ রুচি বৃদ্ধি</h3>
+                <p>পশুর খাওয়ার রুচি বাড়ায় এবং দ্রুত হজমে সহায়তা করে।</p>
+            </div>
+            <div class="benefit-item">
+                <h3>💰 সাশ্রয়ী খরচ</h3>
+                <p>একটি গাভী কিংবা ষাঁড় ১ কেজির একটি প্যাকেট প্রায় এক মাস খেতে পারবে।</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Usage & Dosage -->
+<section class="product" style="background-color: #f8f9fa;">
+    <div class="container">
+        <h2>📋 প্রয়োগ বিধি ও প্যাকিং বিস্তারিত</h2>
+        <div class="product-details">
+            <div class="dosage">
+                <h3>প্যাক সাইজ:</h3>
+                <p>আপনার সুবিধামতো ৫ কেজি, ১০ কেজি এবং ২৫ কেজির ব্যাগে/বালতিতে অথবা ১ কেজির কৌটায় পাওয়া যাচ্ছে।</p>
+                <br>
+                <h3>প্রয়োগ বিধি ও মাত্রা:</h3>
+                <ul>
+                    <li><strong>বড় গরু/মহিষের জন্য:</strong> দৈনিক ১০-৩০ গ্রাম (৩-৪ চা চামচ)।</li>
+                    <li><strong>ছাগল/ভেড়া/বাছুরের জন্য:</strong> দৈনিক ৫-১০ গ্রাম (১-২ চা চামচ)।</li>
+                </ul>
+            </div>
+            <div class="dosage">
+                <h3>🚚 ডেলিভারি সুবিধা:</h3>
+                <p>সারা বাংলাদেশে কুরিয়ারে ক্যাশ অন হোম ডেলিভারি দেওয়া হয়। পণ্য হাতে পেয়ে টাকা পরিশোধের সুবিধা।</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Packages -->
+<section class="packages">
+    <div class="container">
+        <h2 style="text-align: center;">📦 Tinim Zicaph+ – Package Wise Price</h2>
+        
+        <div class="price-grid">
+            <!-- Starter -->
+            <div class="price-card starter">
+                <div class="price-header">
+                    <h3>🟢 Starter Package</h3>
+                </div>
+                <div class="price-body">
+                    <p><strong>১ কেজি</strong> - <span class="price-value">৳380</span></p>
+                    <ul class="price-features" style="margin-top: 10px;">
+                        <li>✔ ছোট খামারের জন্য</li>
+                        <li>✔ প্রথমবার ব্যবহারকারীদের জন্য বেস্ট</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Farmer Package -->
+            <div class="price-card farmer">
+                <div class="price-header">
+                    <h3>🟢 Farmer Package</h3>
+                    <small>(প্যাকেট/ব্যাগ)</small>
+                </div>
+                <div class="price-body">
+                    <p><strong>৫ কেজি</strong> - <span class="price-value">৳1800</span></p>
+                    <ul class="price-features" style="margin-top: 10px;">
+                        <li>🎁 <span class="free-item">১ কেজি ফ্রি (Total 6 kg)</span></li>
+                        <li>🚚 ফ্রি ডেলিভারি</li>
+                        <li>✔ মাঝারি খামারের জন্য আদর্শ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Commercial Bag -->
+            <div class="price-card commercial-bag">
+                <div class="price-header">
+                    <h3>🟢 Commercial Package</h3>
+                    <small>(প্যাকেট/ব্যাগ)</small>
+                </div>
+                <div class="price-body">
+                    <ul class="price-features">
+                        <li><strong>১০ কেজি</strong> - <span class="price-value">৳3400</span><br>🎁 <span class="free-item">২ কেজি ফ্রি (Total 12 kg)</span></li>
+                        <li><strong>২৫ কেজি</strong> - <span class="price-value">৳8000</span><br>🎁 <span class="free-item">৭ কেজি ফ্রি (Total 32 kg)</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Commercial Bucket -->
+            <div class="price-card commercial-bucket">
+                <div class="price-header">
+                    <h3>🟠 Commercial Package</h3>
+                    <small>(বালতিতে)</small>
+                </div>
+                <div class="price-body">
+                    <ul class="price-features">
+                        <li><strong>৫ কেজি</strong> - <span class="price-value">৳2000</span> (ফ্রি ১ কেজি, Total 6 kg)</li>
+                        <li><strong>১০ কেজি</strong> - <span class="price-value">৳3650</span> (ফ্রি ২ কেজি, Total 12 kg)</li>
+                        <li><strong>২৫ কেজি</strong> - <span class="price-value">৳8300</span> (ফ্রি ৭ কেজি, Total 32 kg)</li>
+                        <li>🚚 ফ্রি ডেলিভারি + Priority Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Order Section -->
+<section id="order" class="order">
+    <div class="container">
+        <h2>অর্ডার করতে যোগাযোগ করুন</h2>
+        <div class="offer-alert">
+            🔥 Special Offer: প্রথম অর্ডারে 25% পর্যন্ত ছাড়! Buy More, Save More (সীমিত সময়ের অফার)
+        </div>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>📞 ফোন করুন:</h3>
+                <p style="font-size: 1.2rem; font-weight: bold; color: var(--accent-color);">01533999803</p>
+                <p style="font-size: 1.2rem; font-weight: bold; color: var(--accent-color);">01717354454</p>
+            </div>
+            <div class="contact-item">
+                <h3>💬 মেসেজ দিন:</h3>
+                <p>প্যাকেজ নির্বাচন করে আমাদের ইনবক্সে মেসেজ করুন।</p>
+                <p><strong>ডেলিভারি:</strong> হোম ডেলিভারি, ক্যাশ অন ডেলিভারি।</p>
+            </div>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <a href="tel:01533999803" class="cta-button" style="background-color: var(--accent-color); color: #000; font-size: 1.2rem; padding: 15px 35px;">
+                <i class="fas fa-phone-alt"></i> এখনই কল করুন
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer style="background-color: #111; color: #aaa; padding: 20px 0; text-align: center; font-size: 0.9rem;">
+    <div class="container">
+        <p>TINIM Agrovet since 2012 – উন্নত প্রাণিসম্পদ ও সমৃদ্ধ খামারের বিশ্বস্ত সহযোগী।</p>
+    </div>
+</footer>
+
+</body>
+</html>
